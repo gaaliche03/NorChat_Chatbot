@@ -175,5 +175,4 @@ Master 1 - Sciences des Données
 </br>
 Université de Rouen Normandie, France
 </br>
-
 2025-2026
