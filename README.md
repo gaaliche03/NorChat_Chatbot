@@ -170,6 +170,10 @@ NorChat was built with one simple goal in mind: making university life less over
 ## Authors
 
 **Mariem GAALICHE**
+</br>
 Master 1 - Sciences des Données
+</br>
 Université de Rouen Normandie, France
+</br>
+
 2025-2026
