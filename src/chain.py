@@ -1,13 +1,14 @@
 # Importer les biblios nécessaires
 
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 from huggingface_hub import InferenceClient
 from src.retriever import recuperer_chunks
+from streamlit as st
 
 # Loader mon token Huggingface
 
-load_dotenv()
+#load_dotenv()
 
 # Créer une template pour le prompt qu'on donnera au LLM
 
@@ -36,7 +37,7 @@ Réponse :"""
 def creer_chaine(vs):
     client = InferenceClient(
         model="meta-llama/Llama-3.1-8B-Instruct",
-        token=os.getenv("HF_TOKEN")
+        token=st.secrets["HF_TOKEN"]
     )
     return client, vs
 
