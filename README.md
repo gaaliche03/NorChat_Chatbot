@@ -1,4 +1,4 @@
-# NorChat — Intelligent University Chatbot
+# NorChat: Intelligent University Chatbot
 
 ## Overview
 
