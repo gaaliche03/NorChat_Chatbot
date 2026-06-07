@@ -4,8 +4,7 @@ import os
 #from dotenv import load_dotenv
 from huggingface_hub import InferenceClient
 from src.retriever import recuperer_chunks
-from streamlit as st
-
+import streamlit as st
 # Loader mon token Huggingface
 
 #load_dotenv()
