@@ -44,6 +44,21 @@ The retrieved chunks and the conversation history are injected into a structured
 
 ---
 
+## Evaluation with RAGAS
+
+The performance of NorChat is evaluated using **RAGAS** (Retrieval-Augmented Generation Assessment), a framework designed to assess RAG systems without requiring extensive human annotations.
+
+A benchmark dataset of representative university-related questions was manually created, along with their expected answers. For each question, NorChat retrieves relevant document chunks and generates a response. RAGAS then evaluates the system using four complementary metrics:
+
+* **Faithfulness**: measures whether the generated answer is supported by the retrieved context.
+* **Answer Relevancy**: evaluates how well the answer addresses the user's question.
+* **Context Precision**: measures the proportion of retrieved chunks that are actually useful for answering the question.
+* **Context Recall**: evaluates whether the retrieval step captures all the information required to produce the expected answer.
+
+This evaluation provides quantitative insights into both the retrieval and generation components of the RAG pipeline and helps identify potential weaknesses in the system.
+
+---
+
 ## Project Structure
 
 ```
@@ -57,7 +72,8 @@ NorChat/
 │   ├── embedder.py           # Embedding generation and FAISS indexing
 │   ├── retriever.py          # Similarity-based chunk retrieval
 │   ├── chain.py              # Prompt construction and LLM inference
-│   └── test.py               # Terminal-based conversational loop
+│   ├── test.py               # Terminal-based conversational loop
+│   └── test_ragas.py         # RAGAS-based evaluation of retrieval and generation quality
 │
 ├── app.py                    # Streamlit user interface
 ├── stockage/                 # Persisted FAISS vector store (generated locally)
